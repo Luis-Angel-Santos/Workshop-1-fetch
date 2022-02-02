@@ -3,8 +3,13 @@
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
 
-const BaseUrl = "https://platzi-avo.vercel.app"
-const appNode = document.querySelector('#app')
+const BaseUrl = "https://platzi-avo.vercel.app";
+const appNode = document.querySelector('#app');
+appNode.addEventListener('click', () => {
+    if (event.target.nodeName == 'H2') {
+        window.alert('Has hecho click :)')
+    }  
+});
 const formatPrice = (price) => {
     const newPrice = new window.Intl.NumberFormat('es', {
         style: 'currency',
